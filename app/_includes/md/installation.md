@@ -15,6 +15,12 @@ file for specifying the entities as a declarative configuration.
 
 #### Using a database
 
+<div class="alert alert-ee red">
+    <strong>Deprecation:</strong> 
+    Cassandra is deprecated with <code>kong</code> 2.7. It is strongly discouraged to use C* as your datastore. For more
+    information, see <a href="/gateway-oss/{{ link_to_cassandra_deprecation_overview }}">this blog post</a>.
+</div>
+
 [Configure][configuration] Kong so it can connect to your database. Kong supports both [PostgreSQL {{site.data.kong_latest.dependencies.postgres}}](http://www.postgresql.org/) and [Cassandra {{site.data.kong_latest.dependencies.cassandra}}](http://cassandra.apache.org/) as its datastore.
 
 If you are using Postgres, please provision a database and a user before starting Kong, ie:
